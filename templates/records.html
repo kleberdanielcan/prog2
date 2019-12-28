@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Records</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<style>
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <br>
+    <h2 style="font-weight:bold;text-align: center;" >Aufzeichnungen</h2>
+    <br>
+    <br/>
+	<div class="row justify-content-center">
+                        <div class="col-12 col-md-10 col-lg-8">
+                            <form class="card card-sm">
+                                <div class="card-body row no-gutters align-items-center">
+                                    <div class="col-auto">
+                                        <i class="fas fa-search h4 text-body"></i>
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col">
+                                        <input id="search" class="form-control form-control-lg form-control-borderless" type="search" placeholder="Suche nach Benutzernamen">
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col-auto">
+                                        <button class="btn btn-lg btn-success" type="button" onclick="check()">Search</button>
+                                    </div>
+                                    <!--end of col-->
+                                </div>
+                            </form>
+                        </div>
+                        <!--end of col-->
+                    </div>
+  <br>
+  <br>
+                            <table class="table" id="hide">
+                                    <thead class="thead-dark">
+                                   <tr>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Körpergewicht</th>
+                                        <th scope="col">Körpergrösse</th>
+                                        <th scope="col">Alter</th>
+                                        <th scope="col">Kalorien</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody id="found">
+      
+                                    {% for book in records %}    
+              <tr>
+                <td>{{book.name}}</td>
+                <td>{{book.weight}}</td>
+                <td>{{book.height}}</td>
+                <td>{{book.age}}</td>
+                <td>{{book.calories}}</td>
+              </tr>    
+    {% endfor %}
+</tbody>
+</table>
+<p style="text-align: center; font-style: italic;" id="error"></p>
+
+
+</div>
+<script>
+    var temp=document.querySelectorAll("td")
+    var found=[]
+    temp.forEach(function(a){
+           found.push(a.innerHTML)
+    })
+    localStorage.setItem("found",JSON.stringify(found));
+    var temp3= JSON.parse(localStorage.getItem("found"))
+   console.log(temp3.length)
+function check(){
+   if(document.getElementById("search").value !=""){
+   
+    $("#found").html("")
+    
+    var count=0;
+  var temp=document.querySelectorAll("td")
+var search = document.getElementById("search").value;
+var found2=[]
+console.log(temp3)
+console.log(search)
+ for(var i=0;i<temp3.length;i+=5){
+     if(search.toUpperCase()  == temp3[i].toUpperCase() ){
+          var temp2={
+              name:temp3[i],
+              weight:temp3[i+1],
+              height:temp3[i+2],
+              age:temp3[i+3],
+              calories:temp3[i+4]
+          }
+          found2.push(temp2)
+          count++;
+          console.log("found")
+     }
+ }
+ if(count>0){
+    $("#hide").show();
+     document.getElementById("error").innerHTML=""
+
+  found2.forEach(function(element){
+        $("#found").append("<tr><td>"+element.name+"</td><td>"+element.weight+"</td><td>"+element.height+"</td><td>"+element.age+"</td><td>"+element.calories+"</td></tr>")
+  })
+ }
+ else{
+ $("#hide").hide();
+document.getElementById("error").innerHTML="Keine Aufzeichnungen gefunden"
+ }
+}
+}
+</script>
+</body>
+</html>
+
