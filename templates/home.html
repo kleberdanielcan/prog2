@@ -1,3 +1,4 @@
+<!-- Dies ist die Mainpage. Auf dieser wird der Kunde nach seinen persönlichen Daten gefragt. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,15 +11,14 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
 <div class="container">
   <br>
   <h2 style="text-align: center;font-weight: bold;">KALORIENBERECHNER</h2>
   <br>
- 
+<!-- Mit diesem Formular werden die Kalorien berechnet.-->
   <form class="form" action="/calculate" method="POST">
  <div class="row">
-   
+<!-- Hier werden verschiedene Arten von Eingabefeldern erstellt.--> <!--Hier wird dem Kunden eine Auswahlmöglichkeit gegeben, um das Geschlecht auszuwählen.--> 
     <div class="col-md-6 form-group">
       <label for="exampleFormControlSelect1">Geschlecht:</label>
       <select class="form-control" name="gender">
@@ -26,11 +26,13 @@
         <option>Frau</option>
       </select>
     </div>
+<!--Hier kann der Kunde seinen Namen eingeben.-->
     <div class="col-md-6 form-group">
     <label for="email2" class="mb-2 mr-sm-2">Name:</label>
     <input type="text" class="form-control" id="email2" placeholder="Name" name="name" required>
   </div>
 </div>
+<!-- Weitere Eingabefelder mit vorgegebenen Masseinheiten.-->
 <div class="row">
   <div class="col-md-6 form-group">
     <label for="pwd2" class="mb-2 mr-sm-2">Körpergewicht(in Kg):</label>
@@ -49,6 +51,7 @@
  
 </div>
 <br>
+<!-- Hier kann der Kunde eingeben wieviele Kalorien er/sie zu welcher Mahlzeit eingenommen hat.-->
 <div class="form-group">
   <label for="pwd2" class="mb-2 mr-sm-2">Wie viele Kalorien haben Sie zum Frühstück eingenommen?</label>
   <input type="number" class="form-control " id="pwd2" placeholder="Kalorien" name="breakfast" required>
@@ -68,8 +71,5 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-
-
 </body>
 </html>
