@@ -16,9 +16,11 @@ Das Tool kann danach über die app.py mit folgendem Befehl ausgeführt werden:
 python app.py
 
 ##Flussdiagramm
+In diesem Flussdiagramm wird der Arbeitsablauf des Tools dargestellt.
 
 ![Flussdiagram](Flussdiagramm_Kalorienberechner.PNG)
 
 ##Benutzeranleitung
 
+1. Als erstes muss das Tool gestartet werden. Anschliessend kommt der Kunde auf die Landingpage, auf der er seine persönlichen Daten eingeben kann. Wichtig für die Kalorienberechnung sind Geschlecht, Körpergewicht, Körpergrösse und Aktivität. 
 
