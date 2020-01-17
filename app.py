@@ -28,10 +28,22 @@ class Calculator(db.Model):
 
 @app.route("/")
 def login():
+    """
+    Summary: 
+        Starting point of the application
+    Returns:
+        The home.html page
+    """
     return render_template("home.html")
 
 @app.route("/calculate",  methods = ['POST'])
 def calculate():
+    """
+    Summary: 
+        Calculate Calories based on the form input
+    Returns:
+        The calculated calories with the calories.html page
+    """
     gender = request.form.get('gender')
     name= request.form['name']
     bodyweight = float(request.form['bodyweight'])
@@ -42,9 +54,9 @@ def calculate():
     dinner = float(request.form['dinner'])
     
     if gender == "Männer":
-        Calorie = 66.47 + (13.7 * bodyweight) + (5 * height) - (6.8 * age)
+        Calorie = 666.47 + (13.7 * bodyweight) + (5 * height) - (6.8 * age)
     else:
-        Calorie = 655.1 + (9.6 * bodyweight) + (1.8 * height) - (4.7 * age)  
+        Calorie = 665.1 + (9.6 * bodyweight) + (1.8 * height) - (4.7 * age)  
 
     calorie={}
     calorie['calorie'] = Calorie
@@ -59,6 +71,12 @@ def calculate():
 
 @app.route("/records")
 def records():
+    """
+    Summary: 
+        List all saved records
+    Returns:
+        Returns the page with all saved records
+    """
     records = Calculator.query.all()
     return render_template("records.html",records=records)
 
