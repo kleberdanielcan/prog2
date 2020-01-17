@@ -30,4 +30,6 @@ In diesem Flussdiagramm wird der Arbeitsablauf des Tools dargestellt.
 
 ![calories.html](calories.PNG)
 
+3. Nun kann der Kunde noch auf einer Subpage eine Liste mit den Daten von früheren Nutzern finden. Diese Liste ist auf der records datei und kann in der Suchleiste eingegeben werden. Mithilfe einer eingebauten Suchfunktion kann der Kunde seine eigenen und die Daten anderer Suchen. Die Suchfunktion basiert auf Namen.
+
 
