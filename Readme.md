@@ -24,3 +24,5 @@ In diesem Flussdiagramm wird der Arbeitsablauf des Tools dargestellt.
 
 1. Als erstes muss das Tool gestartet werden. Anschliessend kommt der Kunde auf die Landingpage, auf der er seine persönlichen Daten eingeben kann. Wichtig für die Kalorienberechnung sind Geschlecht, Körpergewicht, Körpergrösse und Aktivität. 
 
+![home.html](home.PNG)
+
