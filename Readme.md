@@ -22,7 +22,12 @@ In diesem Flussdiagramm wird der Arbeitsablauf des Tools dargestellt.
 
 ##Benutzeranleitung
 
-1. Als erstes muss das Tool gestartet werden. Anschliessend kommt der Kunde auf die Landingpage, auf der er seine persönlichen Daten eingeben kann. Wichtig für die Kalorienberechnung sind Geschlecht, Körpergewicht, Körpergrösse und Aktivität. 
+1. Als erstes muss das Tool gestartet werden. Anschliessend kommt der Kunde auf die Landingpage, auf der er seine persönlichen Daten eingeben kann. Wichtig für die Kalorienberechnung sind Geschlecht, Körpergewicht, Körpergrösse und Aktivität. Zudem können Kunden eigeben wieviele Kalorien sie zum Frühstück, Mittagessen und Abendessen gegessen haben.
 
 ![home.html](home.PNG)
+
+2. Anschliessend wird dem Kunden die tägliche Kalorienmege ausgegeben, bei der der Kunde nicht zu und nicht abnimmt. Diese Information ist sehr wichtig für jede Diät. Gleichzeitig werden dem Kunden die bereits verzehrte Kalorienmenge für Frühstück, Mittagessen und Abendessen in einem Kuchendiagramm ausgegeben.
+
+
+
 
