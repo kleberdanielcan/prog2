@@ -15,3 +15,9 @@ Folgende Pakete müssen installiert sein, um den Kalorienberechner starten zu k�
 Das Tool kann danach über die app.py mit folgendem Befehl ausgeführt werden:
 python app.py
 
+##Flussdiagramm
+
+
+##Benutzeranleitung
+
+
