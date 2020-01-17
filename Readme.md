@@ -28,6 +28,6 @@ In diesem Flussdiagramm wird der Arbeitsablauf des Tools dargestellt.
 
 2. Anschliessend wird dem Kunden die tägliche Kalorienmege ausgegeben, bei der der Kunde nicht zu und nicht abnimmt. Diese Information ist sehr wichtig für jede Diät. Gleichzeitig werden dem Kunden die bereits verzehrte Kalorienmenge für Frühstück, Mittagessen und Abendessen in einem Kuchendiagramm ausgegeben.
 
-
+![calories.html](calories.PNG)
 
 
